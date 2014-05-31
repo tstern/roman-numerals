@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roman Numerals Converter</title>
+
+	<meta charset="utf-8">
+
+	<!-- build:css assets/styles/vendor.css -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- endbuild -->
+	<link rel="stylesheet" href="assets/styles/main.css">
+
+</head>
+<body ng-app="RomanNumerals">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<ul class="nav navbar-nav">
+			<li ng-class="{ active: $state.is('main') }">
+				<a ui-sref="main">Main</a>
+			</li>
+			<li ng-class="{ active: $state.is('info') }">
+				<a ui-sref="info">Info</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container" ui-view="">
+	lululu
+</div>
+
+<!-- libraries -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!-- source -->
+<script src="source/app.js"></script>
+<script src="source/services/roman-numerals-converter.js"></script>
+<script src="source/controllers/main.js"></script>
+<script src="source/controllers/info.js"></script>
+
+</body>
+</html>
