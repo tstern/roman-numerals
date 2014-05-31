@@ -6,9 +6,13 @@
 
 	angular.module('RomanNumerals')
 
-		.controller('InfoCtrl', ['$scope',
-			function ($scope) {
-				$scope.text = 'This is the info controller.';
+		.controller('InfoCtrl', ['$scope', 'RomanNumeralsConverter',
+			function ($scope, RomanNumeralsConverter) {
+				$scope.mapping = RomanNumeralsConverter.getMapping();
+
+                $scope.convertRomanNumeralAlgorithm = RomanNumeralsConverter.convertRomanNumeral.toString().replace(/ {16}/g, '');
+
+                $scope.convertNumberAlgorithm = RomanNumeralsConverter.convertNumber.toString().replace(/ {16}/g, '');
 			}]);
 
 }());

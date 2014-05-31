@@ -18,9 +18,15 @@
                     'M': 1000
                 };
 
+                this.getMapping = getMapping;
+
                 this.convertRomanNumeral = convertRomanNumeral;
 
                 this.convertNumber = convertNumber;
+
+                function getMapping() {
+                    return mapping;
+                }
 
                 function convertRomanNumeral(romanNumeral) {
                     var result = 0,
